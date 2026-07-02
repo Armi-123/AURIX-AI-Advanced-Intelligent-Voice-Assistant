@@ -1,0 +1,24 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey"],
+      "responses": ["Hello!", "Hi there!", "Hey!"]
+    },
+    {
+      "tag": "time",
+      "patterns": ["what is time", "current time", "time now"],
+      "responses": ["Checking time..."]
+    },
+    {
+      "tag": "date",
+      "patterns": ["what is date", "today date"],
+      "responses": ["Checking date..."]
+    },
+    {
+      "tag": "bye",
+      "patterns": ["bye", "exit", "quit"],
+      "responses": ["Goodbye!", "See you later!"]
+    }
+  ]
+}

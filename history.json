@@ -1,0 +1,526 @@
+[
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 11:55 AM"
+    },
+    {
+        "user": "what is the",
+        "assistant": "No information found."
+    },
+    {
+        "user": "what is the date",
+        "assistant": "Today's date is 26 June 2026"
+    },
+    {
+        "user": "open youtube",
+        "assistant": "Opening YouTube"
+    },
+    {
+        "user": "elon musk",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "who is elon musk",
+        "assistant": "No information found."
+    },
+    {
+        "user": "who is narendra",
+        "assistant": "No information found."
+    },
+    {
+        "user": "pakistani",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "is ai",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "what is ai",
+        "assistant": "No information found."
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Artificial Intelligence never sleeps because it has no dreams."
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what ise my name",
+        "assistant": "No information found."
+    },
+    {
+        "user": "weather in ahmedabad",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "notepad",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "No information found."
+    },
+    {
+        "user": "what is the",
+        "assistant": "The is a grammatical article in English, denoting nouns that are already or about to be mentioned, under discussion, implied or otherwise presumed familiar to listeners, readers, or speakers. It is the definite article in English."
+    },
+    {
+        "user": "open youtube",
+        "assistant": "Opening YouTube"
+    },
+    {
+        "user": "who is narendra",
+        "assistant": "No information found."
+    },
+    {
+        "user": "who is narendra modi",
+        "assistant": "No information found."
+    },
+    {
+        "user": "artificial",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "what is artificial intelligence",
+        "assistant": "No information found."
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Artificial Intelligence never sleeps because it has no dreams."
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "remind me to study at different 12:30",
+        "assistant": "I am improving day by day. Please try another command."
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "No information found."
+    },
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 12:18 PM"
+    },
+    {
+        "user": "what is the date",
+        "assistant": "Today's date is 26 June 2026"
+    },
+    {
+        "user": "alone",
+        "assistant": "I'm still learning new things."
+    },
+    {
+        "user": "python",
+        "assistant": "I'm still learning new things."
+    },
+    {
+        "user": "what is python",
+        "assistant": "No information found."
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my",
+        "assistant": "M (minuscule: m) is the thirteenth letter of the Latin alphabet, used in the modern English alphabet, the alphabets of several Western European languages and others worldwide. Its name in English is em (pronounced  ), plural ems."
+    },
+    {
+        "user": "my name",
+        "assistant": "I'm still learning new things."
+    },
+    {
+        "user": "remind me to study at 13",
+        "assistant": "Reminder set for 13 to study"
+    },
+    {
+        "user": "open note",
+        "assistant": "Application not supported"
+    },
+    {
+        "user": "open notepad",
+        "assistant": "Opening notepad"
+    },
+    {
+        "user": "narendra modi",
+        "assistant": "I'm still learning new things."
+    },
+    {
+        "user": "who is amit shah",
+        "assistant": "No information found."
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "the time",
+        "assistant": "Current time is 02:17 PM"
+    },
+    {
+        "user": "what is the",
+        "assistant": "The is a grammatical article in English, denoting nouns that are already or about to be mentioned, under discussion, implied or otherwise presumed familiar to listeners, readers, or speakers. It is the definite article in English."
+    },
+    {
+        "user": "australian",
+        "assistant": "Sorry, I couldn't understand. Please try another question."
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Wikipedia Error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "user": "open youtube",
+        "assistant": "Opening YouTube"
+    },
+    {
+        "user": "weather in gujarat",
+        "assistant": "City not found or API error"
+    },
+    {
+        "user": "starting price",
+        "assistant": "Could you please rephrase your question?"
+    },
+    {
+        "user": "open vs code",
+        "assistant": "Opening Visual Studio Code"
+    },
+    {
+        "user": "my name is",
+        "assistant": "I'm still learning. Could you ask that differently?"
+    },
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 12:08 PM"
+    },
+    {
+        "user": "what is the",
+        "assistant": "Wikipedia Error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "user": "what is the date",
+        "assistant": "Today's date is 27 June 2026"
+    },
+    {
+        "user": "who is virat kohli",
+        "assistant": "Wikipedia Error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Wikipedia Error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+        "user": "weather in ahmedabad",
+        "assistant": "City not found or API error"
+    },
+    {
+        "user": "open vs code",
+        "assistant": "Opening Visual Studio Code"
+    },
+    {
+        "user": "open",
+        "assistant": "Sorry, I don't know how to open ''."
+    },
+    {
+        "user": "thank",
+        "assistant": "That's an interesting question. I'm still improving my knowledge."
+    },
+    {
+        "user": "remind me to complete my project",
+        "assistant": "Please say like remind me to study at 18:30"
+    },
+    {
+        "user": "12:00",
+        "assistant": "Could you please rephrase your question?"
+    },
+    {
+        "user": "my name is",
+        "assistant": "I'm still learning. Could you ask that differently?"
+    },
+    {
+        "user": "name is",
+        "assistant": "I don't have enough information about that yet."
+    },
+    {
+        "user": "my name",
+        "assistant": "I don't have enough information about that yet."
+    },
+    {
+        "user": "my name is sheetal",
+        "assistant": "Nice to meet you sheetal"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is sheetal"
+    },
+    {
+        "user": "goodbye",
+        "assistant": "Goodbye! Have a great day."
+    },
+    {
+        "user": "who is virat kohli",
+        "assistant": "Virat Kohli is an Indian international cricketer and the former all-format captain of the Indian national cricket team. He is a right-handed batter and occasional right-arm medium-pace bowler. Considered one of the greatest batsmen in limited overs cricket, he has been acclaimed for his batting skills and records. Kohli has the most centuries in ODIs and the second-most centuries in international cricket with 85 tons across all formats. He is also the leading run-scorer in the Indian Premier League."
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed. Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+    },
+    {
+        "user": "who are you",
+        "assistant": "I am AURIX AI, your Advanced Intelligent Voice Assistant."
+    },
+    {
+        "user": "how are you",
+        "assistant": "All my systems are running smoothly."
+    },
+    {
+        "user": "power 8",
+        "assistant": "That's an interesting question. I'm still improving my knowledge."
+    },
+    {
+        "user": "calculate 2",
+        "assistant": "Sorry, I couldn't find information about calculate 2."
+    },
+    {
+        "user": "12 x 9",
+        "assistant": "I don't have enough information about that yet."
+    },
+    {
+        "user": "12 x 9",
+        "assistant": "I'm still learning. Could you ask that differently?"
+    },
+    {
+        "user": "weather in ahmedabad",
+        "assistant": "City not found or API error"
+    },
+    {
+        "user": "1930",
+        "assistant": "Sorry, I couldn't understand. Please try another question."
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "remind",
+        "assistant": "I'm still learning. Could you ask that differently?"
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Why did Python break up with Java? Because it found someone less complicated."
+    },
+    {
+        "user": "motivational",
+        "assistant": "That's an interesting question. I'm still improving my knowledge."
+    },
+    {
+        "user": "give me a motivational line",
+        "assistant": "Could you please rephrase your question?"
+    },
+    {
+        "user": "what is 12 x",
+        "assistant": "Sorry, I couldn't find information about 12 x."
+    },
+    {
+        "user": "who is ms dhoni",
+        "assistant": "Mahendra Singh Dhoni is an Indian professional cricketer who plays as a right-handed batter and a wicket-keeper. Widely regarded as one of the most prolific wicket-keeper batsmen and captains, he represented the Indian cricket team and was the captain of the team in limited overs formats from 2007 to 2017 and in Test cricket from 2008 to 2014. Dhoni has captained the most international matches and is the most successful Indian captain. He has led India to victory in the 2007 ICC World Twenty20, the 2011 Cricket World Cup, and the 2013 ICC Champions Trophy, being the only captain to win three different limited overs ICC tournaments. He also led the teams that won the Asia Cup in 2010 and 2016, and he was a member of the title winning squad in 2018."
+    },
+    {
+        "user": "is 12 x 3",
+        "assistant": "Could you please rephrase your question?"
+    },
+    {
+        "user": "12 x 3",
+        "assistant": "Sorry, I couldn't understand. Please try another question."
+    },
+    {
+        "user": "open notepad",
+        "assistant": "Opening Notepad"
+    },
+    {
+        "user": "good bye",
+        "assistant": "Goodbye! Have a great day."
+    },
+    {
+        "user": "weather at rajkot",
+        "assistant": "city not found"
+    },
+    {
+        "user": "what is 12 x 8",
+        "assistant": "Sorry, I couldn't find information about 12 x 8."
+    },
+    {
+        "user": "17 august",
+        "assistant": "Sorry, I couldn't understand. Please try another question."
+    },
+    {
+        "user": "remind me on study",
+        "assistant": "Please say like remind me to study at 18:30"
+    },
+    {
+        "user": "find me to study",
+        "assistant": "Could you please rephrase your question?"
+    },
+    {
+        "user": "hello",
+        "assistant": "Hi there! Nice to meet you."
+    },
+    {
+        "user": "give me a motivational",
+        "assistant": "That's an interesting question. I'm still improving my knowledge."
+    },
+    {
+        "user": "exit",
+        "assistant": "Goodbye! Have a great day."
+    },
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 06:25 PM"
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "what is today's date",
+        "assistant": "Today's date is 01 July 2026"
+    },
+    {
+        "user": "open vs",
+        "assistant": "Sorry, I don't know how to open 'vs'."
+    },
+    {
+        "user": "open vs code",
+        "assistant": "Opening Visual Studio Code"
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed. Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Why did Python break up with Java? Because it found someone less complicated."
+    },
+    {
+        "user": "play a song in",
+        "assistant": "Playing a song in"
+    },
+    {
+        "user": "good bye",
+        "assistant": "Goodbye! Have a great day."
+    },
+    {
+        "user": "play a song",
+        "assistant": "Playing a song"
+    },
+    {
+        "user": "hindi movie song",
+        "assistant": "Hello!"
+    },
+    {
+        "user": "play a",
+        "assistant": "Playing a"
+    },
+    {
+        "user": "play a believer",
+        "assistant": "Playing a believer"
+    },
+    {
+        "user": "hello",
+        "assistant": "Hello! How can I help you today?"
+    },
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 06:31 PM"
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "open vs code",
+        "assistant": "Opening Visual Studio Code"
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed. Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Artificial Intelligence never sleeps because it has no dreams."
+    },
+    {
+        "user": "open calculator",
+        "assistant": "Opening Calculator"
+    },
+    {
+        "user": "olivia",
+        "assistant": "Sorry, I couldn't understand. Please try another question."
+    },
+    {
+        "user": "hello",
+        "assistant": "Hello! How can I help you today?"
+    },
+    {
+        "user": "what is the time",
+        "assistant": "Current time is 06:39 PM"
+    },
+    {
+        "user": "my name is army",
+        "assistant": "Nice to meet you army"
+    },
+    {
+        "user": "what is my name",
+        "assistant": "Your name is army"
+    },
+    {
+        "user": "what is machine learning",
+        "assistant": "Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without being explicitly programmed. Advances in the field of deep learning have allowed neural networks, a class of statistical algorithms, to surpass many previous machine learning approaches in performance."
+    },
+    {
+        "user": "open vs code",
+        "assistant": "Opening Visual Studio Code"
+    },
+    {
+        "user": "tell me a joke",
+        "assistant": "Artificial Intelligence never sleeps because it has no dreams."
+    },
+    {
+        "user": "play a",
+        "assistant": "Playing a"
+    },
+    {
+        "user": "what is the date",
+        "assistant": "Today's date is 01 July 2026"
+    },
+    {
+        "user": "who is narendra modi",
+        "assistant": "Narendra Damodardas Modi is an Indian politician who has served as the prime minister of India since 26 May 2014. Modi was the chief minister of Gujarat from 2001 to 2014 and is the Member of Parliament (MP) for Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindutva paramilitary volunteer organisation. He is India's third-longest-serving prime minister, and the longest-serving prime minister outside the Indian National Congress."
+    },
+    {
+        "user": "good bye",
+        "assistant": "Goodbye! Have a great day."
+    }
+]
