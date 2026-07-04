@@ -242,7 +242,6 @@ Search for Artificial Intelligence
 - Desktop Automation
 
 ---
-
 # 📖 Learning Outcomes
 
 This project demonstrates practical implementation of:
