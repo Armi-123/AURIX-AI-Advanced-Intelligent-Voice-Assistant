@@ -1,6 +1,7 @@
 import requests
 
 
+
 # ==========================================
 # WIKIPEDIA SEARCH USING OFFICIAL API
 # ==========================================
@@ -37,8 +38,14 @@ def search_wiki(query):
         data = response.json()
 
         if "extract" in data:
-            return data["extract"]
+            full_text = data["extract"]
 
+            words = full_text.split()
+
+            short_text = " ".join(words[:30]) + "..."
+
+            return data["extract"]
+   
         return "No information available."
 
     except requests.exceptions.ConnectionError:

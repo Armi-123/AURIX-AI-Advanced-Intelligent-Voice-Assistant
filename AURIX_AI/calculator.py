@@ -36,7 +36,6 @@ def safe_eval(node):
     else:
         raise ValueError("Invalid expression")
 
-
 # ==========================================
 # SMART CALCULATOR FUNCTION
 # ==========================================
@@ -55,6 +54,8 @@ def calculate(expression):
             "multiplied by": "*",
             "multiply": "*",
             "x": "*",
+            "×": "*",
+            " X ": "*",
             "into": "*",
             "divided by": "/",
             "divide": "/",

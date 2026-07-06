@@ -1,5 +1,5 @@
 import re
-
+from config import EXIT_COMMANDS
 
 # ==========================================
 # AI Intent Detection
@@ -9,7 +9,7 @@ def detect_intent(command):
     command = command.lower().strip()
 
     # TIME
-    if any(word in command for word in [
+    if any(x in command for x in [
         "time",
         "current time",
         "what time"
@@ -17,7 +17,7 @@ def detect_intent(command):
         return "time"
 
     # DATE
-    elif any(word in command for word in [
+    elif any(x in command for x in [
         "date",
         "today",
         "today's date"
@@ -32,8 +32,20 @@ def detect_intent(command):
     elif "open youtube" in command:
         return "youtube"
 
-    # WIKIPEDIA / KNOWLEDGE
-    elif any(word in command for word in [
+    # MUSIC
+    elif command.startswith("play "):
+        return "play"
+
+    # WEATHER
+    elif (
+        "weather in" in command
+        or "weather at" in command
+        or command.startswith("weather")
+    ):
+        return "weather"
+
+    # WIKIPEDIA
+    elif any(x in command for x in [
         "who is",
         "what is",
         "tell me about",
@@ -43,19 +55,25 @@ def detect_intent(command):
     ]):
         return "wiki"
 
-    # PLAY MUSIC
-    elif command.startswith("play "):
-        return "play"
-
-    # WEATHER
-    elif "weather" in command:
-        return "weather"
+    # Calculator
+    elif (
+        command.startswith("calculate")
+        or command.startswith("solve")
+        or re.search(r"\d+\s*[\+\-\*/%x]\s*\d+", command)
+        or "plus" in command
+        or "minus" in command
+        or "times" in command
+        or "multiply" in command
+        or "divided by" in command
+        or "divide" in command
+    ):
+        return "calculator"
 
     # REMINDER
     elif "remind me" in command:
         return "reminder"
 
-    # SEARCH
+    # WEB SEARCH
     elif command.startswith("search for"):
         return "search"
 
@@ -67,8 +85,13 @@ def detect_intent(command):
     elif "joke" in command:
         return "joke"
 
-    # QUOTE
-    elif "quote" in command or "motivate" in command:
+    # MOTIVATIONAL QUOTE
+    elif (
+        "quote" in command
+        or "motivation" in command
+        or "motivational" in command
+        or "motivate me" in command
+    ):
         return "quote"
 
     # SENTIMENT
@@ -86,6 +109,23 @@ def detect_intent(command):
     elif "what is my name" in command:
         return "get_name"
 
+    # GREETINGS
+    elif any(x in command for x in [
+        "hello",
+        "hi",
+        "good morning",
+        "good afternoon",
+        "good evening"
+    ]):
+        return "greeting"
+
+    # THANKS
+    elif any(x in command for x in [
+        "thank you",
+        "thanks"
+    ]):
+        return "thanks"
+
     # EXIT
     elif any(word in command for word in [
         "exit",
@@ -94,19 +134,23 @@ def detect_intent(command):
         "bye"
     ]):
         return "exit"
+    
+    # EXIT
+    elif any(exit_cmd in command for exit_cmd in EXIT_COMMANDS):
+        return "exit"
 
-    # DEFAULT
     return "chat"
 
 
 # ==========================================
-# Extract Entity
+# Entity Extractor
 # ==========================================
-def extract_entity(command, keyword):
+def extract_entity(command, keyword=""):
 
     command = command.lower()
 
-    command = command.replace(keyword, "")
+    if keyword:
+        command = command.replace(keyword, "")
 
     remove_words = [
         "who is",
@@ -117,7 +161,20 @@ def extract_entity(command, keyword):
         "information about",
         "play",
         "open",
-        "search for"
+        "search for",
+        "weather in",
+        "weather at",
+        "calculate",
+        "the",
+        "a",
+        "an",
+        "define",
+        "definition",
+        "explain",
+        "about",
+        "information",
+        "two line",
+        "in two lines"
     ]
 
     for word in remove_words:

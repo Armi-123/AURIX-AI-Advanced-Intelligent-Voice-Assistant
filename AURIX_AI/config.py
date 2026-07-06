@@ -12,6 +12,7 @@ Version : 1.0
 ==========================================================
 """
 
+
 # ==========================================================
 # Assistant Information
 # ==========================================================
@@ -105,12 +106,24 @@ LOG_FILE = "logs/assistant.log"
 # Supported Exit Commands
 # ==========================================================
 
+# Supported Exit Commands
+
 EXIT_COMMANDS = [
     "exit",
     "quit",
     "stop",
     "bye",
     "goodbye",
+    "bye bye",
+    "bye-bye",
+    "see you",
+    "see you later",
+    "good night",
     "close assistant",
-    "shutdown assistant"
+    "close aurix",
+    "shutdown assistant",
+    "shutdown aurix",
+    "terminate",
+    "end",
+    "end session"
 ]

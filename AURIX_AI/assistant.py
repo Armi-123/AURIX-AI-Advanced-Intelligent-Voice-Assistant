@@ -36,33 +36,48 @@ from sentiment import detect_sentiment
 # ===========================================
 
 def handle_memory(command):
+    """
+    Handles user memory:
+    - Save user's name
+    - Recall user's name
+    """
 
-    command = command.lower()
+    command = command.lower().strip()
 
-    # Save Name
+    # -----------------------------
+    # SAVE USER NAME
+    # -----------------------------
     if "my name is" in command:
 
         name = command.replace("my name is", "").strip()
 
-        if name:
-            set_user_name(name)
-
-            response = f"Nice to meet you {name}"
-
-            speak(response)
-            add_history(command, response)
-
+        if not name:
+            speak("Please tell me your name.")
             return True
 
-    # Recall Name
-    elif "what is my name" in command:
+        set_user_name(name)
+
+        response = f"Nice to meet you, {name.title()}."
+
+        speak(response)
+        add_history(command, response)
+
+        return True
+
+    # -----------------------------
+    # RECALL USER NAME
+    # -----------------------------
+    if "what is my name" in command:
 
         name = get_user_name()
 
         if name:
-            response = f"Your name is {name}"
+            response = f"Your name is {name.title()}."
         else:
-            response = "I don't know your name yet. Please tell me."
+            response = (
+                "I don't know your name yet. "
+                "Please tell me by saying 'My name is ...'."
+            )
 
         speak(response)
         add_history(command, response)
@@ -71,297 +86,309 @@ def handle_memory(command):
 
     return False
 
-
-
 # ===========================================
 # MAIN AI ENGINE
 # ===========================================
 
 def process_command(command):
 
-    command = command.lower().strip()
+    try:
 
-    # -----------------------------
-    # MEMORY
-    # -----------------------------
-    if handle_memory(command):
-        return True
+        command = command.lower().strip()
 
-    intent = detect_intent(command)
+        # -----------------------------------
+        # MEMORY
+        # -----------------------------------
+        if handle_memory(command):
+            return True
 
-    response = ""
+        intent = detect_intent(command)
 
-    # ===========================================
-    # TIME
-    # ===========================================
+        response = ""
 
-    if intent == "time":
+        # ===================================
+        # GREETING
+        # ===================================
 
-        response = f"Current time is {current_time()}"
+        if intent == "greeting":
 
-        speak(response)
-
-    # ===========================================
-    # DATE
-    # ===========================================
-
-    elif intent == "date":
-
-        response = f"Today's date is {current_date()}"
-
-        speak(response)
-
-    # ===========================================
-
-    elif intent == "greeting":
-
-        response = "Good Morning! How can I help you?"
-
-        speak(response)
-    # ===========================================
-    # GOOGLE
-    # ===========================================
-
-    elif intent == "google":
-
-        response = "Opening Google"
-
-        speak(response)
-
-        webbrowser.open(GOOGLE_URL)
-
-    # ===========================================
-    # YOUTUBE
-    # ===========================================
-
-    elif intent == "youtube":
-
-        response = "Opening YouTube"
-
-        speak(response)
-
-        webbrowser.open(YOUTUBE_URL)
-
-    # ===========================================
-    # PLAY MUSIC
-    # ===========================================
-
-    elif intent == "play":
-
-        song = extract_entity(command, "play")
-
-        if not song:
-
-            response = "Please tell me which song to play."
-
-        else:
-
-            response = f"Playing {song}"
+            response = "Hello! I'm AURIX AI. How can I help you today?"
 
             speak(response)
 
-            pywhatkit.playonyt(song)
+        # ===================================
+        # TIME
+        # ===================================
 
-    # ===========================================
-    # WIKIPEDIA
-    # ===========================================
+        elif intent == "time":
 
-    elif intent == "wiki":
-
-        topic = (
-            command.replace("who is", "")
-                .replace("what is", "")
-                .replace("tell me about", "")
-                .strip()
-        )
-        
-        if len(topic) < 2:
-
-            response = "Please tell me what you want to search."
+            response = f"Current time is {current_time()}"
 
             speak(response)
 
-        else:
+        # ===================================
+        # DATE
+        # ===================================
 
-            speak(f"Searching Wikipedia for {topic}")
+        elif intent == "date":
 
-            result = search_wiki(topic)
-
-            response = result
-
-            speak(result)
-
-    # ===========================================
-    # WEATHER
-    # ===========================================
-
-    elif intent == "weather":
-
-        city = extract_entity(command, "weather")
-
-        if not city:
-            city = command.replace("weather in", "").strip()
-        if not city:
-
-            response = "Please tell me a city name."
-
-        else:
-
-            response = get_weather(city)
-        # response = get_weather(city)
-
-        speak(response)
-
-    # ===========================================
-    # REMINDER
-    # ===========================================
-
-    elif intent == "reminder":
-
-        try:
-
-            task, reminder_time = (
-                command.replace("remind me to", "")
-                .split("at")
-            )
-
-            response = add_reminder(
-                task.strip(),
-                reminder_time.strip()
-            )
+            response = f"Today's date is {current_date()}"
 
             speak(response)
 
-        except ValueError:
+        # ===================================
+        # GOOGLE
+        # ===================================
 
-            response = (
-                "Please say like "
-                "remind me to study at 18:30"
-            )
+        elif intent == "google":
+
+            response = "Opening Google"
 
             speak(response)
 
-    # ===========================================
-    # WEB SEARCH
-    # ===========================================
+            webbrowser.open(GOOGLE_URL)
 
-    elif intent == "search":
+        # ===================================
+        # YOUTUBE
+        # ===================================
 
-        query = command.replace("search for", "").strip()
+        elif intent == "youtube":
 
-        response = search_web(query)
+            response = "Opening YouTube"
 
-        speak(response)
+            speak(response)
 
-    # ===========================================
-    # OPEN APPLICATIONS
-    # ===========================================
+            webbrowser.open(YOUTUBE_URL)
 
-    elif intent == "open_app":
+        # ===================================
+        # PLAY MUSIC
+        # ===================================
 
-        app = extract_entity(command, "open")
+        elif intent == "play":
 
-        response = open_app(app)
+            song = extract_entity(command, "play")
 
-        speak(response)
+            if not song:
 
-    # ===========================================
-    # SENTIMENT
-    # ===========================================
+                response = "Please tell me which song you want to play."
 
-    elif (
-        "i feel" in command
-        or "how do i feel" in command
-        or "i am feeling" in command
-    ):
+                speak(response)
 
-        mood = detect_sentiment(command)
+            else:
 
-        response = f"You seem {mood}"
+                response = f"Playing {song}"
 
-        speak(response)
+                speak(response)
 
-    # ===========================================
-    # JOKE
-    # ===========================================
+                try:
+                    pywhatkit.playonyt(song)
 
-    elif intent == "joke":
+                except Exception:
 
-        response = random_joke()
+                    response = "Sorry, I couldn't play that song."
 
-        speak(response)
+                    speak(response)
 
-    # ===========================================
-    # MOTIVATIONAL QUOTE
-    # ===========================================
+        # ===================================
+        # CALCULATOR
+        # ===================================
 
-    elif intent == "quote":
+        elif intent == "calculator":
 
-        response = motivational_quote()
-
-        speak(response)
-
-    # ===========================================
-    # EXIT
-    # ===========================================
-
-    elif intent == "exit":
-
-        response = "Goodbye! Have a great day."
-
-        speak(response)
-
-        add_history(command, response)
-
-        return False
-# ===========================================
-
-    elif intent == "thanks":
-
-        response = "You're welcome."
-
-        speak(response)
-        
-  # ===========================================
-      
-    elif (
-        "calculate" in command
-        or "what is" in command
-        or "solve" in command
-    ):
-
-        math_symbols = [
-            "+", "-", "*", "/", "%",
-            "plus", "minus", "times",
-            "multiply", "divide"
-        ]
-
-        if any(symbol in command for symbol in math_symbols):
+            # print("Calculator block reached")
 
             response = calculate(command)
 
-            speak(response)
+            # print("Calculator Response:", response)
 
-        else:
-            topic = extract_entity(command, "")
-            response = search_wiki(topic)
             speak(response)
             
-    # ===========================================
-    # DEFAULT CHATBOT
-    # ===========================================
+        # ===================================
+        # WIKIPEDIA
+        # ===================================
 
-    else:
+        elif intent == "wiki":
 
-        response = chatbot_response(command)
+            topic = (
+                command.replace("who is", "")
+                    .replace("what is", "")
+                    .replace("tell me about", "")
+                    .replace("define", "")
+                    .replace("explain", "")
+                    .replace("information about", "")
+                    .strip()
+)
 
-        speak(response)
-    
-    # ===========================================
-    # SAVE HISTORY
-    # ===========================================
+            if not topic:
 
-    if response:
-        add_history(command, response)
+                response = "Please tell me what you want to search."
 
-    return True
+                speak(response)
+
+            else:
+
+                speak(f"Searching Wikipedia for {topic}")
+
+                response = search_wiki(topic)
+
+                print("\nWikipedia Result:\n")
+                print(response)
+
+                words = response.split()
+
+                short_response = (
+                    " ".join(words[:30]) + "..."
+                    if len(words) > 30
+                    else response
+                )
+
+                speak(short_response)
+                
+        # ===================================
+        # WEATHER
+        # ===================================
+
+        elif intent == "weather":
+
+            response = get_weather(command)
+
+            speak(response)
+
+        # ===================================
+        # REMINDER
+        # ===================================
+
+        elif intent == "reminder":
+
+            try:
+
+                task, reminder_time = (
+                    command.replace("remind me to", "")
+                    .split("at")
+                )
+
+                response = add_reminder(
+                    task.strip(),
+                    reminder_time.strip()
+                )
+
+            except Exception:
+
+                response = (
+                    "Please say like "
+                    "'Remind me to study at 18:30'."
+                )
+
+            speak(response)
+
+        # ===================================
+        # WEB SEARCH
+        # ===================================
+
+        elif intent == "search":
+
+            query = extract_entity(command, "search for")
+
+            response = search_web(query)
+
+            speak(response)
+
+        # ===================================
+        # OPEN APPLICATION
+        # ===================================
+
+        elif intent == "open_app":
+
+            app = extract_entity(command, "open")
+
+            if not app:
+
+                response = "Please tell me which application you want to open."
+
+            else:
+
+                response = open_app(app)
+
+            speak(response)
+
+        # ===================================
+        # SENTIMENT
+        # ===================================
+
+        elif intent == "sentiment":
+
+            mood = detect_sentiment(command)
+
+            response = f"You seem {mood}."
+
+            speak(response)
+
+        # ===================================
+        # JOKE
+        # ===================================
+
+        elif intent == "joke":
+
+            response = random_joke()
+
+            speak(response)
+
+        # ===================================
+        # MOTIVATIONAL QUOTE
+        # ===================================
+
+        elif intent == "quote":
+
+            response = motivational_quote()
+
+            speak(response)
+
+        # ===================================
+        # THANKS
+        # ===================================
+
+        elif intent == "thanks":
+
+            response = "You're welcome. Happy to help."
+
+            speak(response)
+
+        # ===================================
+        # EXIT
+        # ===================================
+
+        elif intent == "exit":
+
+            response = "Goodbye! Have a great day."
+
+            speak(response)
+
+            add_history(command, response)
+
+            return False
+
+        # ===================================
+        # CHATBOT
+        # ===================================
+
+        else:
+
+            response = chatbot_response(command)
+
+            speak(response)
+
+        # ===================================
+        # SAVE HISTORY
+        # ===================================
+
+        if response:
+
+            add_history(command, response)
+
+        return True
+
+    except Exception as e:
+        print(f"[AURIX ERROR] {e}")
+        speak("Sorry, something went wrong.")
+
+        return True
