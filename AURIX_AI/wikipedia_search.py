@@ -1,7 +1,5 @@
 import requests
 
-
-
 # ==========================================
 # WIKIPEDIA SEARCH USING OFFICIAL API
 # ==========================================
